@@ -34,7 +34,7 @@ function generatePassword() {
   var uppercaseChar = lowercaseChar.map((lowercaseChar) =>
     lowercaseChar.toUpperCase()
   );
-  
+
   var numbChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
   var specialChar = [
@@ -58,7 +58,8 @@ function generatePassword() {
 
   var passLength = prompt("How long would you like your password to be?");
   var addNumbers = confirm(
-    "Would you like numbers in your password? Click OK for Yes or Click Cancel for NO"
+    "Would you like numbers in your password?",
+    "Click OK for Yes or Click Cancel for NO"
   );
   var addUpperCase = confirm(
     "Would you like to add Uppercase? Click OK for Yes or Click Cancel for NO"
@@ -70,10 +71,10 @@ function generatePassword() {
     "Would you like to add special characters? Click OK for Yes or Click Cancel for NO"
   );
 
-  if (passLength < 129) {
+  if ((passLength < 129, passLength > 7)) {
     console.log("valid input");
   } else
-    return displayArray.concat("Password Length must be between 0 and 128");
+    return displayArray.concat("Password Length must be between 8 and 128");
 
   if (addNumbers) {
     finalArray = finalArray.concat(numbChar);
