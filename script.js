@@ -71,7 +71,7 @@ function generatePassword() {
     "Would you like to add special characters? Click OK for Yes or Click Cancel for NO"
   );
 
-  if (passLength > 8 && passLength < 129) {
+  if (passLength > 7 && passLength < 129) {
     console.log("valid input");
   } else
     return displayArray.concat("Password Length must be between 8 and 128");
